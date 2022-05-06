@@ -1,0 +1,108 @@
+html{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+body{
+    margin: 0;
+    background-color: black
+}
+h1{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    font-size: 300%;
+    font-weight: 400;
+    opacity: 0;
+    z-index: 1;
+    color: rgb(75, 213, 238);
+    animation-name: intro;
+    animation-duration: 2s;
+    animation-timing-function: ease-out 1s;
+}
+@keyframes intro {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0s;
+    }
+}
+
+img{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    opacity: 0;
+    z-index: 1;
+    animation-name: logo;
+    animation-duration: 5s;
+    animation-timing-function: ease-out 5s;
+    animation-delay: 5s;
+}
+@keyframes logo {
+    0% {
+        width: 18em;        
+        transform: scale(2.60);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;
+    }
+}
+main{
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(500px) rotatex(25deg);
+    position: absolute;
+    text-align: justify;
+    font-size: 350%;
+    font-weight: bold;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+    width: 60%;
+    left: 20%;
+    bottom: 0;
+    height: 400%;
+}
+#content {
+    animation: scroll 20s linear 16s;
+    position: absolute;
+    top: 100%;
+  }
+
+#title, #subtitle{
+    text-align: center;
+}
+main::after{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    content: '';
+    background: linear-gradient(rgba(247, 246, 246, 0) rgba(36, 36, 36, 0.651));
+}
+@keyframes scroll {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: -200%;
+        transform: perspective(200px) ;
+    }
+}
+p{
+    color: #FFFF82;
+}
