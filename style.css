@@ -78,7 +78,7 @@ main{
     height: 400%;
 }
 #content {
-    animation: scroll 20s linear 16s;
+    animation: scroll 30s linear 16s;
     position: absolute;
     top: 100%;
   }
